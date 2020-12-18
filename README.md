@@ -17,6 +17,11 @@ The project is public
 - express
 - Docker
  
+ ## Ressources
+
+- [Docker Tutorial](https://www.docker.com/101-tutorial)
+- [Nodejs Docker webapp](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+
 ## Author
 
 👤 Venceslas Burongu
