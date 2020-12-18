@@ -2,7 +2,8 @@
 Dockerizing a node app
 
 Docker is a containerization plateofrm helping to packege the application with all its dependecies.
-Docker stands on 3 concepts
+Docker stands on 3 concepts:
+
 - Docker file
 - DockerImages &
 - Docker container
@@ -21,6 +22,37 @@ The project is public
 
 - [Docker Tutorial](https://www.docker.com/101-tutorial)
 - [Nodejs Docker webapp](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+
+## How it works
+
+- Create the repository and initialise it with ````npm init```
+- install the express dependencies by executing the command ```npm i --save express```
+- Create the express server and configure it to listen from http request
+
+- go on [DockerHub](https://hub.docker.com/) and create an account to get the ID
+- go on Explore and select the Node image
+- If you scrol by reading you may find the **How to use this image**
+
+- Create a DockerFile (without extension), in the project and write some commands. 
+(Follow the link for updates [Node for Docker](https://hub.docker.com/_/node))
+
+```
+FROM node:10
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD node app.js
+EXPOSE 3000
+```
+
+- to build the image we execute the command: ```docker build -t node-docker-app .```
+
+- this will make it pull from the node library some dependencies
+
+- to run the image we execute the command: ```docker run -it -p 9000:3000 node-docker-app```
+- to run a docker container in the backgroung we execute this command: ```docker run -d -p 9000:3000 node-docker-app```
+- to see the image which are running, we execute ```docker ps```
 
 ## Author
 
