@@ -33,24 +33,24 @@ The project is public
 - go on Explore and select the Node image
 - If you scrol by reading you may find the **How to use this image**
 
-- Create a DockerFile (without extension), in the project and write some commands. 
+- Create a Dockerfile (without extension), in the project and write some commands. 
 (Follow the link for updates [Node for Docker](https://hub.docker.com/_/node))
 
 ```
-FROM node:10
+FROM node:10-slim
 WORKDIR /app
-COPY package.json /app
+COPY package.json /all
 RUN npm install
 COPY . /app
-CMD node app.js
-EXPOSE 3000
+CMD ["npm", "start"]
+#EXPOSE 3000
 ```
 
-- to build the image we execute the command: ```docker build -t node-docker-app .```
+- to build the image we execute the command: ```$ docker build -t nod-dock-app .```
 
 - this will make it pull from the node library some dependencies
 
-- to run the image we execute the command: ```docker run -it -p 9000:3000 node-docker-app```
+- to run the image we execute the command: ```$ docker run -it -p 9000:3000 nod-dock-app```
 - to run a docker container in the backgroung we execute this command: ```docker run -d -p 9000:3000 node-docker-app```
 - to see the image which are running, we execute ```docker ps```
 
