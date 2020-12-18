@@ -1,0 +1,22 @@
+{
+  "name": "nod-dock",
+  "version": "1.0.0",
+  "description": "Nodejs app with Docker",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvenceslas/Nod-dock.git"
+  },
+  "author": "Venceslas Burongu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bvenceslas/Nod-dock/issues"
+  },
+  "homepage": "https://github.com/bvenceslas/Nod-dock#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
