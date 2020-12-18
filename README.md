@@ -51,8 +51,19 @@ CMD ["npm", "start"]
 - this will make it pull from the node library some dependencies
 
 - to run the image we execute the command: ```$ docker run -it -p 9000:3000 nod-dock-app```
-- to run a docker container in the backgroung we execute this command: ```docker run -d -p 9000:3000 node-docker-app```
+
+- to run a docker container in the backgroung we execute this command: ```docker run -d -p 9000:3000 nod-dock-app```
+
 - to see the image which are running, we execute ```docker ps```
+
+
+It's also possible to add nodemon in the container so that it can load all the changes automaically by installing the nodemon dependancy ```$ npm i --save nodemon```
+
+- then build again the image by using : ```$ docker build -t nod-dock-app .```
+
+- to run the image we will use : ```$ docker run -it -p 9001:3000 -v $(pwd):/app nod-dock-app``` to specify the volume
+
+
 
 ## Author
 
