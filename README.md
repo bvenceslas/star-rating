@@ -52,7 +52,7 @@ CMD ["npm", "start"]
 
 - to run the image we execute the command: ```$ docker run -it -p 9000:3000 nod-dock-app```
 
-- to run a docker container in the backgroung we execute this command: ```docker run -d -p 9000:3000 nod-dock-app```
+- to run a docker container in background we execute the command: ```docker run -d -p 9000:3000 nod-dock-app```
 
 - to see the image which are running, we execute ```docker ps```
 
@@ -63,6 +63,7 @@ It's also possible to add nodemon in the container so that it can load all the c
 
 - to run the image we will use : ```$ docker run -it -p 9001:3000 -v $(pwd):/app nod-dock-app``` to specify the volume
 
+- we can decide to run the docker container in the background once more again ```docker run -d -p 9000:3000 nod-dock-app```
 
 
 ## Author
