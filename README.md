@@ -1,84 +1,70 @@
-# Nod-dock
-Dockerizing a node app
+# Getting Started with Create React App
 
-Docker is a containerization plateofrm helping to packege the application with all its dependecies.
-Docker stands on 3 concepts:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Docker file
-- DockerImages &
-- Docker container
+## Available Scripts
 
-## Getting Started
+In the project directory, you can run:
 
-The project is public
+### `npm start`
 
-## Built With
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- NodeJS
-- express
-- Docker
- 
- ## Ressources
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- [Docker Tutorial](https://www.docker.com/101-tutorial)
-- [Nodejs Docker webapp](https://nodejs.org/en/docs/guides/nodejs-docker-webapp/)
+### `npm test`
 
-## How it works
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Create the repository and initialise it with ````npm init```
-- install the express dependencies by executing the command ```npm i --save express```
-- Create the express server and configure it to listen from http request
+### `npm run build`
 
-- go on [DockerHub](https://hub.docker.com/) and create an account to get the ID
-- go on Explore and select the Node image
-- If you scrol by reading you may find the **How to use this image**
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- Create a Dockerfile (without extension), in the project and write some commands. 
-(Follow the link for updates [Node for Docker](https://hub.docker.com/_/node))
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-```
-FROM node:10-slim
-WORKDIR /app
-COPY package.json /all
-RUN npm install
-COPY . /app
-CMD ["npm", "start"]
-#EXPOSE 3000
-```
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-- to build the image we execute the command: ```$ docker build -t nod-dock-app .```
+### `npm run eject`
 
-- this will make it pull from the node library some dependencies
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-- to run the image we execute the command: ```$ docker run -it -p 9000:3000 nod-dock-app```
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-- to run a docker container in background we execute the command: ```docker run -d -p 9000:3000 nod-dock-app```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-- to see the image which are running, we execute ```docker ps```
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+## Learn More
 
-It's also possible to add nodemon in the container so that it can load all the changes automaically by installing the nodemon dependancy ```$ npm i --save nodemon```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-- then build again the image by using : ```$ docker build -t nod-dock-app .```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-- to run the image we will use : ```$ docker run -it -p 9001:3000 -v $(pwd):/app nod-dock-app``` to specify the volume
+### Code Splitting
 
-- we can decide to run the docker container in the background once more again ```docker run -d -p 9000:3000 nod-dock-app```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
+### Analyzing the Bundle Size
 
-## Author
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-👤 Venceslas Burongu
+### Making a Progressive Web App
 
-- Github: @bvenceslas [@bvenceslas](https://github.com/bvenceslas)
-- Twitter: [@bvenceslas](https://twitter.com/bvenceslas)
-- Linkedin: [Venceslas Burongu](https://www.linkedin.com/in/venceslas-burongu-8271b519a/)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-## 🤝Contributing
+### Advanced Configuration
 
-Contributions, issues and feature requests are welcome!!!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-## Show your support
+### Deployment
 
-Give a ⭐️ if you like this project!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
