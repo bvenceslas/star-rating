@@ -10,12 +10,19 @@ const starContainerStyle = {
   display: "flex",
 };
 
-function StartRating({ maxRating = 5, color = "#fcc419", size = 48 }) {
+function StartRating({
+  maxRating = 5,
+  color = "#fcc419",
+  size = 48,
+  messages = [],
+  onSetRating,
+}) {
   const [rating, setRating] = useState(0);
   const [tempRating, setTempRating] = useState(0);
 
   function handleRating(rating) {
     setRating(rating);
+    onSetRating(rating);
   }
 
   const textStyle = {
@@ -40,7 +47,11 @@ function StartRating({ maxRating = 5, color = "#fcc419", size = 48 }) {
           />
         ))}
       </div>
-      <p style={textStyle}>{tempRating || rating || ""}</p>
+      <p style={textStyle}>
+        {messages.length === maxRating
+          ? messages[tempRating ? tempRating - 1 : rating - 1]
+          : tempRating || rating || ""}
+      </p>
     </div>
   );
 }
